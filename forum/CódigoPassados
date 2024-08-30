@@ -1,0 +1,90 @@
+//    init{
+//        val topico = Topico(
+//            id = 1,
+//            titulo = "Duvida Kotlin",
+//            mensagem = "Teste de variáveis",
+//            curso = Curso(
+//                id = 1,
+//                nome = "Kotlin",
+//                categoria = "Programação"
+//            ),
+//            autor = Usuario(
+//                id = 1,
+//                nome = "Pedro",
+//                email = "pedro@gmail.com"
+//            )
+//        )
+//        val topico2 = Topico(
+//            id = 2,
+//            titulo = "Duvida Kotlin2",
+//            mensagem = "Teste de variáveis2",
+//            curso = Curso(
+//                id = 1,
+//                nome = "Kotlin",
+//                categoria = "Programação"
+//            ),
+//            autor = Usuario(
+//                id = 1,
+//                nome = "Pedro",
+//                email = "pedro@gmail.com"
+//            )
+//        )
+//        val topico3 = Topico(
+//            id = 3,
+//            titulo = "Duvida Kotlin3",
+//            mensagem = "Teste de variáveis3",
+//            curso = Curso(
+//                id = 1,
+//                nome = "Kotlin",
+//                categoria = "Programação"
+//            ),
+//            autor = Usuario(
+//                id = 1,
+//                nome = "Pedro",
+//                email = "pedro@gmail.com"
+//            )
+//        )
+//        topicos = Arrays.asList(topico, topico2, topico3)
+//    }
+
+---------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------
+
+//    init{
+//        val usuario = Usuario(
+//            id = 1,
+//            nome = "Pedro",
+//            email = "pedro@gmail.com"
+//        )
+//        autores = Arrays.asList(usuario)
+//    }
+
+fun buscarPorId(id: Long): Usuario{
+        return autores.stream().filter { a ->
+            a.id == id
+        }.findFirst().get()
+    }
+
+---------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------
+
+init{
+        val curso = Curso(
+            id = 1,
+            nome = "Koltin",
+            categoria = "Programação"
+        )
+        cursos = Arrays.asList(curso)
+    }
+
+    fun buscarPorId(id: Long):Curso{
+        return cursos.stream().filter { c ->
+            c.id == id
+        }.findFirst().get()
+    }
+
+---------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------
